@@ -36,10 +36,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //  ["fetchQuotesFromServer"]
     //  ["https://jsonplaceholder.typicode.com/posts"]
+    // ["syncQuotes"]
     function saveQuotes() {
         localStorage.setItem("quotes", JSON.stringify(quotes));
     }
 
+    // Check for periodically checking for new quotes from the server
     async function syncNewLocalQuotes() {
         const unsyncedQuotes = quotes.filter(q => !q.id); // Only new quotes
         for (let quote of unsyncedQuotes) {
@@ -64,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => { notificationBox.style.display = "none"; }, 3000);
     }
 
+    // Check for updating local storage with server data and conflict resolution
     function populateCategories() {
         const categories = ["All Categories", ...new Set(quotes.map(q => q.category))];
 
@@ -94,6 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Check for UI elements or notifications for data updates or conflicts
     function addQuote() {
         const text = newQuoteText.value.trim();
         const category = newQuoteCategory.value.trim();
