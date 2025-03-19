@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     //  ["fetchQuotesFromServer"]
+    //  ["https://jsonplaceholder.typicode.com/posts"]
     function saveQuotes() {
         localStorage.setItem("quotes", JSON.stringify(quotes));
     }
