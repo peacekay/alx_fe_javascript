@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Check for UI elements or notifications for data updates or conflicts
+    // Check for UI elements or notifications for data updates or conflicts  ["Quotes synced with server!"]
     function addQuote() {
         const text = newQuoteText.value.trim();
         const category = newQuoteCategory.value.trim();
