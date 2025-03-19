@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
     }
 
-    /** ✅ Function to add a new quote */
+    /** ✅ Function to add a new quote and ["createAddQuoteForm"] */ 
     function addQuote() {
         const quoteText = quoteInput.value.trim();
         const quoteAuthor = authorInput.value.trim();
