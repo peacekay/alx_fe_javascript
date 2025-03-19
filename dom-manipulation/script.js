@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    //  ["fetchQuotesFromServer"]
     function saveQuotes() {
         localStorage.setItem("quotes", JSON.stringify(quotes));
     }
